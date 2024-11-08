@@ -2,74 +2,19 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: project-rust
-  description: A Rust-based microservice component
+  description: |
+    A Rust-based microservice component that demonstrates basic web service functionality.
+  links:
+    - title: API Documentation
+      url: https://github.com/anubhavg-icpl/project-rust/blob/master/docs/api.md
+    - title: Development Guide
+      url: https://github.com/anubhavg-icpl/project-rust/blob/master/docs/development.md
+    - title: Operations Guide
+      url: https://github.com/anubhavg-icpl/project-rust/blob/master/docs/operations.md
   annotations:
     github.com/project-slug: anubhavg-icpl/project-rust
     backstage.io/techdocs-ref: dir:.
-  tags:
-    - rust
-    - backend
-    - service
-  labels:
-    language: rust
-    tier: backend
 spec:
   type: service
-  lifecycle: experimental
   owner: user:guest
-  system: project-rust
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: project-rust-api
-  description: REST API for the Rust service
-spec:
-  type: openapi
   lifecycle: experimental
-  owner: user:guest
-  definition:
-    $text: |
-      openapi: 3.0.0
-      info:
-        title: Project Rust API
-        version: 0.1.0
-        description: A simple Rust microservice API
-      paths:
-        /health:
-          get:
-            summary: Health check endpoint
-            responses:
-              '200':
-                description: Service health status
-                content:
-                  application/json:
-                    schema:
-                      type: object
-                      properties:
-                        status:
-                          type: string
-                        version:
-                          type: string
-        /echo:
-          post:
-            summary: Echo service
-            requestBody:
-              required: true
-              content:
-                application/json:
-                  schema:
-                    type: object
-                    properties:
-                      content:
-                        type: string
-            responses:
-              '200':
-                description: Echoed message
-                content:
-                  application/json:
-                    schema:
-                      type: object
-                      properties:
-                        content:
-                          type: string
