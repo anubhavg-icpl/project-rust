@@ -1,6 +1,6 @@
 use actix_web::{web, App, HttpServer, HttpResponse, Responder};
 use serde::{Serialize, Deserialize};
-use log::{info, error};
+use log::{info};
 
 #[derive(Serialize)]
 struct HealthResponse {
