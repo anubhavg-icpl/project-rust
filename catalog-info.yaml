@@ -1,10 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: rust-service
+  name: project-rust
   description: A Rust-based microservice component
   annotations:
-    github.com/project-slug: your-org/rust-service
+    github.com/project-slug: anubhavg-icpl/project-rust
     backstage.io/techdocs-ref: dir:.
   tags:
     - rust
@@ -17,19 +17,19 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: team-backend
+  owner: guests
   system: backend-services
   dependsOn:
     - resource:default/database
   providesApis:
-    - rust-service-api
+    - project-rust-api
   consumesApis:
     - auth-service-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: rust-service-api
+  name: project-rust-api
   description: REST API for the Rust service
   tags:
     - rest
@@ -38,14 +38,14 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: team-backend
+  owner: guests
   definition:
     $text: ./openapi.yaml
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: rust-service-resources
+  name: project-rust-resources
   description: Collection of resources for the Rust service
 spec:
   targets:
