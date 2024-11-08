@@ -1,0 +1,32 @@
+site_name: 'Rust Service Documentation'
+site_description: 'Documentation for the Rust Service Component'
+
+nav:
+  - Home: index.md
+  - API: api.md
+  - Development: development.md
+  - Operations: operations.md
+
+plugins:
+  - techdocs-core
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.details
+  - toc:
+      permalink: true
+
+# Theme customization
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+  palette:
+    primary: deep orange
+    accent: orange
