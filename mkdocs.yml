@@ -1,5 +1,5 @@
-site_name: 'Project Rust'
-site_description: 'Documentation for the Rust Service Component'
+site_name: "Project Rust"
+site_description: "Documentation for the Rust Service Component"
 
 nav:
   - Home: index.md
@@ -14,9 +14,6 @@ markdown_extensions:
   - admonition
   - pymdownx.highlight
   - pymdownx.superfences
-  - pymdownx.tasklist
-  - toc:
-      permalink: true
 
 theme:
   name: material
@@ -24,4 +21,6 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
-    - search.highlight
+
+repo_url: https://github.com/anubhavg-icpl/project-rust
+edit_uri: edit/master/docs
