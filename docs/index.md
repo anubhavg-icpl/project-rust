@@ -1,56 +1,48 @@
-# Project Rust Documentation
-
-Welcome to the Project Rust documentation. This service provides a foundation for building scalable microservices in Rust.
+# Project Rust
 
 ## Overview
 
-Project Rust is a template microservice that demonstrates:
+Project Rust is a template microservice that demonstrates building scalable web services using Rust.
 
-- Modern Rust web service development
-- Integration with Backstage developer portal
-- Best practices for service documentation
-- API-first development approach
+## Features
+
+- REST API with Actix-web
+- Health check endpoint
+- Echo service
+- Structured logging
+- Docker support
+- Backstage integration
+
+## Quick Links
+
+- [API Documentation](api.md)
+- [Development Guide](development.md)
+- [Operations Guide](operations.md)
 
 ## Getting Started
 
-1. **Prerequisites**
-   - Rust 1.70 or newer
-   - Cargo package manager
-   - Docker (optional)
+1. Clone the repository
+```bash
+git clone https://github.com/anubhavg-icpl/project-rust.git
+```
 
-2. **Local Development**
-   ```bash
-   # Clone the repository
-   git clone https://github.com/your-org/project-rust.git
-   
-   # Build the project
-   cargo build
-   
-   # Run tests
-   cargo test
-   
-   # Start the service
-   cargo run
-   ```
+2. Build the project
+```bash
+cargo build
+```
 
-3. **Verify Installation**
-   ```bash
-   # Check health endpoint
-   curl http://localhost:8080/health
-   ```
+3. Run the service
+```bash
+cargo run
+```
 
-## Architecture
+4. Test the endpoints
+```bash
+# Health check
+curl http://localhost:8080/health
 
-The service follows a clean architecture pattern with:
-
-- REST API layer using actix-web
-- Structured logging
-- Health checking
-- Configuration management
-- Error handling
-
-## Documentation Sections
-
-- [API Documentation](api.md) - API endpoints and usage
-- [Development Guide](development.md) - Setup and development workflow
-- [Operations Guide](operations.md) - Deployment and monitoring
+# Echo service
+curl -X POST -H "Content-Type: application/json" \
+     -d '{"content":"Hello"}' \
+     http://localhost:8080/echo
+```

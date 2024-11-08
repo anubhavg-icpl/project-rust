@@ -1,4 +1,4 @@
-site_name: 'Rust Service Documentation'
+site_name: 'Project Rust'
 site_description: 'Documentation for the Rust Service Component'
 
 nav:
@@ -15,11 +15,9 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.tasklist
-  - pymdownx.details
   - toc:
       permalink: true
 
-# Theme customization
 theme:
   name: material
   features:
@@ -27,6 +25,3 @@ theme:
     - navigation.sections
     - navigation.expand
     - search.highlight
-  palette:
-    primary: deep orange
-    accent: orange
